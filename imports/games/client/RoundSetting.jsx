@@ -1,4 +1,5 @@
 import React from "react";
+import { RadioSurvey } from "./RadioSurvey";
 
 const MAX_VIEW_COUNT = 9;
 
@@ -39,6 +40,7 @@ export class RoundSetting extends React.Component {
     }
 
     player.set(key, this.nextRoundSetting);
+    player.round.set(key, this.nextRoundSetting);
     this.props.player.stage.submit();
   };
 
@@ -57,6 +59,17 @@ export class RoundSetting extends React.Component {
     );
   }
 
+  renderSurvey() {
+    const { game, player } = this.props;
+
+    return (
+      <div>
+        <RadioSurvey {...this.props} name='one_player_speaktimes' text="I think we should give one player more speaking time." items={['Disagree', '', '', '', 'Agree']}></RadioSurvey>
+        <RadioSurvey {...this.props} name='equal_speaktimes' text="I think we should have more equal speaking time." items={['Disagree', '', '', '', '', '', 'Agree']}></RadioSurvey>
+      </div>
+    );
+  }
+
   render() {
     const { stage, player, game } = this.props;
     let message = "Choose viewed times plan";
@@ -66,6 +79,8 @@ export class RoundSetting extends React.Component {
       return this.renderSubmitted();
     }
 
+    // :get speakimes setting
+
     return (
       <div className="task-response">
         <form onSubmit={this.handleSubmit}>
@@ -74,12 +89,14 @@ export class RoundSetting extends React.Component {
             {game.players.map((p, i) => {
               return (
                 <div key={i}>
-                  <label>{p.get('name')} will viewed</label>
-                  <input type="number" step="1" min="1" max={MAX_VIEW_COUNT} required onChange={(e) => { this.handleViewCountChange(p, e.target.value) }}></input>
+                  <label>{p.get('name')} was viewed {p.get('currentSpeakTime')} last round. Next round, {p.get('name')} should be viewed</label>
+                  {/* ignore max check  */}
+                  <input style={{ width: '40px' }} type="number" step="1" min="1" _max={MAX_VIEW_COUNT} required onChange={(e) => { this.handleViewCountChange(p, e.target.value) }}></input>
                 </div>
               );
             })}
           </div>
+          {this.renderSurvey()}
           <div className="bp3-form-group">
             <button
               type="submit"

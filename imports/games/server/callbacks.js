@@ -1,4 +1,4 @@
-import { setupRoundStage, wrapRoundCollector } from './game-round';
+import { setupRoundStage, wrapRoundCollector, caculateAverageGuess } from './game-round';
 import Empirica from "meteor/empirica:core";
 
 // onGameStart is triggered opnce per game before the game starts, and before
@@ -33,6 +33,9 @@ Empirica.onStageStart((game, round, stage, players) => {
   players.forEach(player => {
     player.stage.set("guess", player.round.get("guess"));
   });
+
+  //caculate avg guess
+  caculateAverageGuess({ game, round, stage, players });
 });
 
 // onStageEnd is triggered after each stage.

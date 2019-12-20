@@ -18,10 +18,16 @@ export default class TaskResponse extends React.Component {
   }
 
   render() {
-    const { stage, player } = this.props;
+    const { game, stage, player } = this.props;
     let message = "";
+    let averageMessage = '';
     if (stage.name === "outcome") {
-      message = "Black arrow is the correct answer";
+      if (game.treatment.showAnswer) {
+        message = "Black arrow is the correct answer";
+      }
+      if (game.treatment.showAverageGuess) {
+        averageMessage = "Blue arrow is the average answer";
+      }
     } else {
       if (!player.round.get("guess")) {
         message = "Click inside the circle to make your guess";
@@ -40,6 +46,9 @@ export default class TaskResponse extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <h5 className="bp3-heading">{message}</h5>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <h5 className="bp3-heading">{averageMessage}</h5>
           </div>
           <div className="bp3-form-group">
             <button

@@ -135,6 +135,7 @@ export function addRoundStage(round, stageArgs, { game }) {
         },
         set(k, v) {
             data[k] = v;
+            Statges
         }
     };
     dbAppendRoundStages(round, [iStage], { game });
@@ -164,6 +165,7 @@ export function setupRoundStage({ game, players, round, playerSpeakTimeSetting }
     playerSpeakTimeSetting.map(({ timeCount, player }) => {
         _.times(timeCount, j => { queue.push({ player, index: j }); })
         debugplayerSpeakTimeSetting.push({ timeCount, player: player._id });
+        player.set('currentSpeakTime', timeCount);
     });
 
     //shuffle
@@ -173,22 +175,24 @@ export function setupRoundStage({ game, players, round, playerSpeakTimeSetting }
     });
     // console.log('shuffle result', debugplayerSpeakTimeSetting, debugQueue);
     queue.map(({ player, index }) => {
-        round.addStage({
+        const stage = round.addStage({
             name: player.get("name") + index,
             displayName:
                 players.length > 1
                     ? "observe " + player.get("name")
                     : "Attempt: " + Math.round(index + 1),
-            durationInSeconds: appConfig.DEBUG ? 1 : game.treatment.stageDuration,
-            observe: player.get("_id")
+            durationInSeconds: appConfig.DEBUG ? appConfig.DEBUG_STAGE_TIME : game.treatment.stageDuration,
+            observe: player.get("_id"),
         });
+        //set not work here
+        // stage.set('observe', player.get("_id"));
     });
 
     //at the end of each round (i.e., discussion) you show the correct answer
     round.addStage({
         name: "outcome",
         displayName: "outcome",
-        durationInSeconds: appConfig.DEBUG ? 2000000 : game.treatment.stageDuration + 10 //adding 10 seconds in the round outcome
+        durationInSeconds: appConfig.DEBUG ? appConfig.DEBUG_STAGE_LONG_TIME : game.treatment.outcomeStageDuration //adding 10 seconds in the round outcome
     });
 
     //last round need not setting
@@ -253,6 +257,48 @@ function customShuffle(players, treatment) {
     }
 
     return players;
+}
+
+export function caculateAverageGuess({ game, round, players, stage }) {
+    const isOutcome = stage.name == 'outcome';
+    if (!isOutcome) return;
+    // :avg guess
+    let avgGuess = null;
+    let totalGuess = null;
+    let observesStage = [];
+    let guessCount = 0;
+    //have to fetch from db
+    const stages = Stages.find({
+        "gameId": game._id,
+        "roundId": round._id
+    }).fetch();
+    stages.map(istage => {
+        const observedPlayerId = istage.data['observe'];
+        if (!observedPlayerId) {
+            return;
+        }
+        // const observedPlayer = game.players.find(p => p._id == observedPlayerId);
+        // :get player stage
+        const guess = istage.data['observedGuess'];
+        const data = {
+            stageIndex: istage.index,
+            stageId: istage._id,
+            playerId: observedPlayerId,
+            guess
+        };
+        if (guess != null) {
+            totalGuess = +totalGuess;
+            totalGuess += data.guess;
+            guessCount += 1;
+        }
+        observesStage.push(data);
+    });
+    if (totalGuess != null) {
+        avgGuess = totalGuess / guessCount;
+    }
+    round.set('averageGuess', avgGuess);
+    round.set('averageGuessLog', observesStage);
+    console.log('avg guess is', avgGuess, observesStage);
 }
 
 // old code

@@ -62,7 +62,7 @@ Empirica.gameInit((game, treatment, players) => {
         round.addStage({
             name: "response",
             displayName: "Response",
-            durationInSeconds: appConfig.DEBUG ? 1 : game.treatment.stageDuration + 5 //adding 10 seconds for the initial guess
+            durationInSeconds: appConfig.DEBUG ? appConfig.DEBUG_STAGE_TIME : game.treatment.stageDuration + 5 //adding 10 seconds for the initial guess
         });
 
         if (i == 0) {

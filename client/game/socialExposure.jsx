@@ -1,6 +1,21 @@
 import React from "react";
 
 export default class SocialExposure extends React.Component {
+  componentDidMount() {
+    const { game, stage, player } = this.props;
+    const otherPlayer = game.players.find(
+      p => stage.name.charAt(0) === p.get("name")
+    );
+    const observed = otherPlayer._id === player._id;
+    //for log
+    if (!stage.get('observe')) {
+      stage.set('observe', player._id)
+    }
+    if (observed) {
+      player.stage.set("observed", true);
+    }
+  }
+
   renderObserve() {
     const { game, stage, player } = this.props;
     //TODO: this should be fixed as stage.observe that was defined in init .. the whole
@@ -9,8 +24,9 @@ export default class SocialExposure extends React.Component {
     const otherPlayer = game.players.find(
       p => stage.name.charAt(0) === p.get("name")
     );
+    const observed = otherPlayer._id === player._id;
     //if the current player is the one to be observed
-    if (otherPlayer._id === player._id) {
+    if (observed) {
       return (
         <div className="social-exposure">
           <p>
@@ -45,8 +61,8 @@ export default class SocialExposure extends React.Component {
               </h4>{" "}
             </div>
           ) : (
-            ""
-          )}
+              ""
+            )}
         </div>
       );
     }

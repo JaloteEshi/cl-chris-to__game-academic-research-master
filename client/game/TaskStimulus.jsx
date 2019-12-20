@@ -1,6 +1,7 @@
 import Board from "./Board";
 
 import React from "react";
+import { isObservedPlayer } from "../../imports/games/client/common-client";
 
 export default class TaskStimulus extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ export default class TaskStimulus extends React.Component {
   }
 
   updateArrow = (guess, state) => {
+    const { game, player, stage } = this.props;
     this.setState({ guess: guess });
     //up means mouse up
     if (state === "up") {
@@ -44,6 +46,11 @@ export default class TaskStimulus extends React.Component {
       //console.log("now will save");
       this.props.player.round.set("guess", guess);
       this.props.player.stage.set("guess", guess);
+      if (isObservedPlayer({
+        game, playerId: player._id, stage
+      })) {
+        stage.set('observedGuess', guess);
+      }
     }
   };
 
@@ -78,6 +85,7 @@ export default class TaskStimulus extends React.Component {
     return (
       <Board
         game={game}
+        round={round}
         guess={this.state.guess}
         isOutcome={isOutcome}
         stage={stage}

@@ -84,16 +84,32 @@ export default class Board extends React.Component {
     super();
     this.state = {
       dots: [],
-      time: 0
+      time: 0,
+      avgGuess: null,
+      showAvgGuess: false
     };
   }
 
   componentDidMount() {
+    this.averageGuess();
     this.startGame();
   }
 
   componentWillUnmount() {
     this.stopGame();
+  }
+
+  averageGuess() {
+    const { game, isOutcome, round, taskData: { answer } } = this.props;
+    if (!isOutcome) return;
+
+    // :avg guess
+    let avgGuess = round.get('averageGuess');
+    const showAvgGuess = isOutcome && game.treatment.showAverageGuess && null != avgGuess;
+    this.setState({
+      avgGuess,
+      showAvgGuess
+    });
   }
 
   // =======================
@@ -274,6 +290,15 @@ export default class Board extends React.Component {
     return <Arrow key={"answer"} angle={answer} size={4} color={"#000000"} />;
   }
 
+  renderAvgGuess() {
+    const color = `blue`;
+    if (!this.state.showAvgGuess) {
+      return null;
+    }
+
+    return <Arrow key={"avgGuess"} disabled={true} angle={this.state.avgGuess} size={2} color={color} />;
+  }
+
   render() {
     const { alters } = this.props;
 
@@ -299,6 +324,7 @@ export default class Board extends React.Component {
           {this.renderGuess()}
           {alters ? alters.map(player => this.renderAlterGuess(player)) : null}
           {this.renderAnswer()}
+          {this.renderAvgGuess()}
         </div>
       </div>
     );

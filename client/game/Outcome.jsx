@@ -1,4 +1,5 @@
 import React from "react";
+import { OutcomeSurvey } from "../../imports/games/client/OutcomeSurvey";
 
 export default class Outcome extends React.Component {
   renderBogusFeedback() {
@@ -20,12 +21,13 @@ export default class Outcome extends React.Component {
 
     //making sure not to add "+" if the player score is negative because of not answering
     scoreText = scoreText >= 0 ? "+" + scoreText : scoreText;
+    const signColor = 'black';
     return (
       <div className="alter bp3-card bp3-elevation-2">
         <div className="info">
           <div className="left">
             {/* <img src={player.get("avatar")} className="profile-avatar" /> */}
-            <h4 className="bp3-heading" style={{ color: 'black' }}>
+            <h4 className="bp3-heading" style={{ color: signColor }}>
               {avgCumulativeScore} and in {percentile}%
             </h4>
           </div>
@@ -34,7 +36,7 @@ export default class Outcome extends React.Component {
             <span className="score">{player.get("cumulativeScore") || 0}</span>
             <span
               className="variation"
-              style={{ color: player.round.get("scoreColor") }}
+              style={{ color: signColor }}
             >
               <strong> ({scoreText})</strong>
             </span>
@@ -48,12 +50,16 @@ export default class Outcome extends React.Component {
     let scoreText = player.round.get("score") || 0;
     //making sure not to add "+" if the player score is negative because of not answering
     scoreText = scoreText >= 0 ? "+" + scoreText : scoreText;
+    // const signColor = player.get("arrowColor");
+    const signColor = 'black';
+    // const scoreColor = player.round.get("scoreColor");
+    const scoreColor = signColor;
     return (
       <div className="alter bp3-card bp3-elevation-2" key={player._id}>
         <div className="info">
           <div className="left">
             <img src={player.get("avatar")} className="profile-avatar" />
-            <h4 className="bp3-heading" style={{ color: player.get("arrowColor") }}>
+            <h4 className="bp3-heading" style={{ color: signColor }}>
               {player.get("name")}
             </h4>
           </div>
@@ -62,7 +68,7 @@ export default class Outcome extends React.Component {
             <span className="score">{player.get("cumulativeScore") || 0}</span>
             <span
               className="variation"
-              style={{ color: player.round.get("scoreColor") }}
+              style={{ color: scoreColor }}
             >
               <strong> ({scoreText})</strong>
             </span>
@@ -118,6 +124,8 @@ export default class Outcome extends React.Component {
           </p>
           {this.renderBogusFeedback()}
         </div>
+
+        <OutcomeSurvey {...this.props}></OutcomeSurvey>
 
       </div>
     );
