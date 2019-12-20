@@ -1,0 +1,351 @@
+treatments:
+  - name: 3G
+    factorIds:
+      - PayMDkKNJwPkR6z9Q
+      - RH2eSSTMuhZwM9A69
+      - zcF3YxeEaFFhzWKDQ
+      - ciCJsFfHQ5G8homma
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - LGriGRtTWXW4GJzPA
+      - v9TzyoJpgHopE2W6c
+      - XudmMYB7L3FypkMhy
+  - name: 2G1B
+    factorIds:
+      - PayMDkKNJwPkR6z9Q
+      - 9of4xcrkENgyKSB6z
+      - zcF3YxeEaFFhzWKDQ
+      - ciCJsFfHQ5G8homma
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - LGriGRtTWXW4GJzPA
+      - v9TzyoJpgHopE2W6c
+      - 8ddEuseaHkJgddc9a
+  - name: 1G2B
+    factorIds:
+      - PayMDkKNJwPkR6z9Q
+      - djDSzEWD8tNugcxNe
+      - zcF3YxeEaFFhzWKDQ
+      - ciCJsFfHQ5G8homma
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - LGriGRtTWXW4GJzPA
+      - v9TzyoJpgHopE2W6c
+      - 9XjztLDguZ6wiuFCm
+  - name: 3B
+    factorIds:
+      - PayMDkKNJwPkR6z9Q
+      - mAb8jjXpfuEguwqiF
+      - zcF3YxeEaFFhzWKDQ
+      - ciCJsFfHQ5G8homma
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - LGriGRtTWXW4GJzPA
+      - v9TzyoJpgHopE2W6c
+      - CpDzs4x2T4hsr7iRA
+  - name: team(3)_ka
+    factorIds:
+      - PayMDkKNJwPkR6z9Q
+      - RH2eSSTMuhZwM9A69
+      - zcF3YxeEaFFhzWKDQ
+      - sNg4o5YYe5QGsNQQJ
+      - EEJc8QBbLZ5TTNBH7
+      - v9TzyoJpgHopE2W6c
+      - bJxPPpvMKPToMpFpy
+      - 5uPXJvRCdpriyxaX7
+  - name: test
+    factorIds:
+      - SkNgbJAaZ83jP7frw
+      - RH2eSSTMuhZwM9A69
+      - zcF3YxeEaFFhzWKDQ
+      - sNg4o5YYe5QGsNQQJ
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - EEJc8QBbLZ5TTNBH7
+      - v9TzyoJpgHopE2W6c
+      - XudmMYB7L3FypkMhy
+      - v2Pz7efwFbnyo2YXM
+      - 5uPXJvRCdpriyxaX7
+      - qtHhWTdkD6QxFFqnP
+    archivedAt: 2019-12-18T07:20:09.405Z
+  - name: test-showanswer
+    factorIds:
+      - SkNgbJAaZ83jP7frw
+      - RH2eSSTMuhZwM9A69
+      - zcF3YxeEaFFhzWKDQ
+      - sNg4o5YYe5QGsNQQJ
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - aLDbku4cLs7JkkPGc
+      - v9TzyoJpgHopE2W6c
+      - XudmMYB7L3FypkMhy
+      - v2Pz7efwFbnyo2YXM
+      - 5uPXJvRCdpriyxaX7
+      - cLWivRMpabcFNjDDG
+    archivedAt: 2019-12-18T07:20:15.089Z
+  - name: test
+    factorIds:
+      - SkNgbJAaZ83jP7frw
+      - RH2eSSTMuhZwM9A69
+      - zcF3YxeEaFFhzWKDQ
+      - sNg4o5YYe5QGsNQQJ
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - aLDbku4cLs7JkkPGc
+      - XudmMYB7L3FypkMhy
+      - v2Pz7efwFbnyo2YXM
+      - 5uPXJvRCdpriyxaX7
+      - cLWivRMpabcFNjDDG
+      - H38sidJSaEKJDgsBL
+    archivedAt: 2019-12-18T08:08:25.265Z
+  - name: test_notshow
+    factorIds:
+      - xkk96s48prbwyJBGf
+      - qtHhWTdkD6QxFFqnP
+      - 5uPXJvRCdpriyxaX7
+      - v2Pz7efwFbnyo2YXM
+      - SkNgbJAaZ83jP7frw
+      - zcF3YxeEaFFhzWKDQ
+      - sNg4o5YYe5QGsNQQJ
+      - 67bamzM9tn3pvrnt3
+      - aLDbku4cLs7JkkPGc
+      - v9TzyoJpgHopE2W6c
+  - name: test
+    factorIds:
+      - SkNgbJAaZ83jP7frw
+      - RH2eSSTMuhZwM9A69
+      - zcF3YxeEaFFhzWKDQ
+      - sNg4o5YYe5QGsNQQJ
+      - vpZxydZ435FxFKmRy
+      - 67bamzM9tn3pvrnt3
+      - EEJc8QBbLZ5TTNBH7
+      - v9TzyoJpgHopE2W6c
+      - XudmMYB7L3FypkMhy
+      - v2Pz7efwFbnyo2YXM
+      - 5uPXJvRCdpriyxaX7
+      - cLWivRMpabcFNjDDG
+      - H38sidJSaEKJDgsBL
+factorTypes:
+  - _id: cafThyE4JB2y4uHXy
+    name: playerCount
+    description: The Number of players participating in the given game.
+    required: true
+    type: Integer
+    min: 1
+  - _id: QCjzY9XjvaATCLFd7
+    name: nGoodPerformers
+    description: The fraction of good performers in the group (0 = all bad; 1 = all good)
+    required: false
+    type: Number
+    min: 0
+    max: 1
+  - _id: u7QnpSQCJ9zbBHPyb
+    name: stageDuration
+    description: Specifies how many seconds for each decision stage
+    required: true
+    type: Number
+    min: 5
+    max: 300
+  - _id: BKQvXNNPFx5xsB6HE
+    name: nBlocks
+    description: >-
+      The number of times a participants will speak during one discussion (i.e.,
+      one round)
+    required: true
+    type: Integer
+    min: 1
+    max: 100
+  - _id: qvaemkY2dhuoGoRqj
+    name: firstSpeakerFixed
+    description: Whether to fix the first speaker across all round
+    required: false
+    type: Boolean
+  - _id: 9Xi8ojGYSDTgJTgFK
+    name: lastSpeakerFixed
+    description: Whether to fix the last speaker across all round
+    required: true
+    type: Boolean
+  - _id: osPRJDngGNRrXCWjy
+    name: nRounds
+    description: The number of rounds in the game (can't be more than the number of tasks)
+    required: true
+    type: Integer
+    min: 1
+    max: 20
+  - _id: hktwLRBkctetxpecZ
+    name: basePay
+    description: 'The amount for base pay (i.e., showing up and completing the experiment)'
+    required: true
+    type: Integer
+    min: 0
+    max: 10
+  - _id: 8xYtWoCJ3itp3JgP2
+    name: conversionRate
+    description: 'converting the game score to actual money (i.e., bonus)'
+    required: false
+    type: Number
+    min: 0
+    max: 100
+  - _id: ErNcJiWM4TnNZXnnF
+    name: speakTimes
+    description: >-
+      eg: [2,3,1] means 2 times viewed for player1. 3 times for player 2. 1
+      times for player1.
+    required: true
+    type: String
+  - _id: Lr4HKPfQbhRC3eRhc
+    name: bogusFeedback
+    description: >-
+      bogus feedback percentile value range show to the players each outcome
+      stage. eg: [10,90] then the bogus value will random from 10%  to 90%
+    required: true
+    type: String
+  - _id: X5teth8z7CQZQGM7H
+    name: showAnswer
+    description: Turn on will show correct Answer in the outcome stage
+    required: true
+    type: Boolean
+  - _id: 5DRD3pZ5EAsre7iT4
+    name: showIndividualScore
+    description: 'Turn on will show individual  score, otherwise will not.'
+    required: true
+    type: Boolean
+factors:
+  - _id: tksiDEyQ6msuHnZJB
+    name: 'true'
+    value: true
+    factorTypeId: qvaemkY2dhuoGoRqj
+  - _id: vpZxydZ435FxFKmRy
+    name: 'false'
+    value: false
+    factorTypeId: qvaemkY2dhuoGoRqj
+  - _id: mJCx7tnLB6tvvKSa4
+    name: 'true'
+    value: true
+    factorTypeId: 9Xi8ojGYSDTgJTgFK
+  - _id: 67bamzM9tn3pvrnt3
+    name: 'false'
+    value: false
+    factorTypeId: 9Xi8ojGYSDTgJTgFK
+  - _id: cLWivRMpabcFNjDDG
+    name: 'true'
+    value: true
+    factorTypeId: X5teth8z7CQZQGM7H
+  - _id: qtHhWTdkD6QxFFqnP
+    name: 'false'
+    value: false
+    factorTypeId: X5teth8z7CQZQGM7H
+  - _id: H38sidJSaEKJDgsBL
+    name: 'true'
+    value: true
+    factorTypeId: 5DRD3pZ5EAsre7iT4
+  - _id: xkk96s48prbwyJBGf
+    name: 'false'
+    value: false
+    factorTypeId: 5DRD3pZ5EAsre7iT4
+  - _id: PayMDkKNJwPkR6z9Q
+    name: team
+    value: 3
+    factorTypeId: cafThyE4JB2y4uHXy
+  - _id: YG37iPiTPXbjopAny
+    name: solo
+    value: 1
+    factorTypeId: cafThyE4JB2y4uHXy
+  - _id: RH2eSSTMuhZwM9A69
+    name: all_good
+    value: 1
+    factorTypeId: QCjzY9XjvaATCLFd7
+  - _id: mAb8jjXpfuEguwqiF
+    name: all_bad
+    value: 0
+    factorTypeId: QCjzY9XjvaATCLFd7
+  - _id: djDSzEWD8tNugcxNe
+    name: third_good
+    value: 0.33
+    factorTypeId: QCjzY9XjvaATCLFd7
+  - _id: 9of4xcrkENgyKSB6z
+    name: two_third_good
+    value: 0.66
+    factorTypeId: QCjzY9XjvaATCLFd7
+  - _id: 8FzzX9b4mPvYkHRRY
+    name: 15seconds
+    value: 15
+    factorTypeId: u7QnpSQCJ9zbBHPyb
+  - _id: ciCJsFfHQ5G8homma
+    name: '3'
+    value: 3
+    factorTypeId: BKQvXNNPFx5xsB6HE
+  - _id: LGriGRtTWXW4GJzPA
+    name: '15'
+    value: 15
+    factorTypeId: osPRJDngGNRrXCWjy
+  - _id: cHiLusm5BwnQHdibB
+    name: '2'
+    value: 2
+    factorTypeId: hktwLRBkctetxpecZ
+  - _id: XudmMYB7L3FypkMhy
+    name: 5.4max
+    value: 0.004
+    factorTypeId: 8xYtWoCJ3itp3JgP2
+  - _id: zcF3YxeEaFFhzWKDQ
+    name: 10seconds
+    value: 10
+    factorTypeId: u7QnpSQCJ9zbBHPyb
+  - _id: v9TzyoJpgHopE2W6c
+    name: '1'
+    value: 1
+    factorTypeId: hktwLRBkctetxpecZ
+  - _id: 8ddEuseaHkJgddc9a
+    name: 6max
+    value: 0.005
+    factorTypeId: 8xYtWoCJ3itp3JgP2
+  - _id: CpDzs4x2T4hsr7iRA
+    name: 10max
+    value: 0.007
+    factorTypeId: 8xYtWoCJ3itp3JgP2
+  - _id: 9XjztLDguZ6wiuFCm
+    name: 7max
+    value: 0.006
+    factorTypeId: 8xYtWoCJ3itp3JgP2
+  - _id: sNg4o5YYe5QGsNQQJ
+    name: '1'
+    value: 1
+    factorTypeId: BKQvXNNPFx5xsB6HE
+  - _id: aLDbku4cLs7JkkPGc
+    name: '1'
+    value: 1
+    factorTypeId: osPRJDngGNRrXCWjy
+  - _id: SwZbq55eXGai7ESfa
+    name: '2'
+    value: 2
+    factorTypeId: BKQvXNNPFx5xsB6HE
+  - _id: SkNgbJAaZ83jP7frw
+    name: '2'
+    value: 2
+    factorTypeId: cafThyE4JB2y4uHXy
+  - _id: EEJc8QBbLZ5TTNBH7
+    name: '2'
+    value: 2
+    factorTypeId: osPRJDngGNRrXCWjy
+  - _id: v2Pz7efwFbnyo2YXM
+    name: test2_23
+    value: '[2,3]'
+    factorTypeId: ErNcJiWM4TnNZXnnF
+  - _id: 5uPXJvRCdpriyxaX7
+    name: good
+    value: '[70,80]'
+    factorTypeId: Lr4HKPfQbhRC3eRhc
+  - _id: oXxwRnH6wSwLBgFx2
+    name: bad
+    value: '[30,40]'
+    factorTypeId: Lr4HKPfQbhRC3eRhc
+  - _id: bJxPPpvMKPToMpFpy
+    name: '223'
+    value: '[2,2,3]'
+    factorTypeId: ErNcJiWM4TnNZXnnF
+lobbyConfigs:
+  - name: 10min
+    timeoutType: lobby
+    timeoutInSeconds: 600
+    timeoutStrategy: fail
+    gameLobbyIds: []
